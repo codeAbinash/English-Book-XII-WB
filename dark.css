@@ -1,0 +1,16 @@
+:root{
+    --main-theme-color:white;
+    --main-text-color:black;
+    --theme-icon:invert(-1);
+    --shadow-color:#00000020;
+    /* --color:gold; */
+    --color:dodgerblue;
+    --sub-text-color:#777;
+    --backdrop:#ffffff88;
+    --backdrop-light:#ffffffbb;
+    --backdrop-light2:#ffffffdd;
+    --sub-text-color2:#aaa;
+    --shadow-color-light:#eee;
+}
+
+
