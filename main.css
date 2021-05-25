@@ -6,6 +6,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--main-text-color);
+    background-color: var(--main-theme-color);
 }
 header{
     height:65px;
@@ -62,10 +64,12 @@ section .search input[type=search]{
     padding: 15px 15px 15px calc(15px + 1.1em + 8px);
     box-shadow: 0px 1px 8px 0px var(--shadow-color);
     margin: 10px 0 10px 0;
-    border-radius: 100px;
+    border-radius:100px;
     background-color: var(--backdrop);
     font-family: qsb;
     color: var(--main-text-color);
+    /* border: 1px solid var(--grid-border-color); */
+
 }
 section .search input[type=search]::-webkit-search-cancel-button{
     /* position:relative;
@@ -100,7 +104,7 @@ section .option{
 section .link{
     margin-left: 6%;
     padding: 12px 18px;
-    background-color: rgba(30, 143, 255, 0.1);
+    background-color: rgba(30, 143, 255, 0.15);
     display: inline-block;
     color: var(--color);
     margin-top: 10px;
@@ -132,13 +136,14 @@ section .bookCard{
     width: 88%;
     display: block;
     margin:25px auto 25px auto;
-    background-color: var(--main-theme-color);
+    background-color: var(--card-color);
     height: auto;
     min-height: 50px;
     border-radius: 12px;
     box-shadow: 1px 1px 8px 5px var(--shadow-color-light);
     overflow: hidden;
     transition: 0.4s;
+
 }
 section .bookCard:active{
     transform: scale(0.95);
@@ -203,6 +208,103 @@ section .nav{
     align-items: center;
     transition: 0.1s linear bottom;
 }
+section #readLeft{
+    background-color: rgba(30, 143, 255, 0.1);
+    border-color: var(--color);
+    color: var(--color);
+}
+section #darkSwitch{
+    padding-left: 10px;
+    color: var(--main-text-color);
+    background-color: black;
+}
+section #darkSwitch h1{
+    color: #ffe259;
+}
+section #darkSwitch p{
+    font-family: qsb;
+    color:white;
+}
+section #profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 17px;
+    /* background-color: rgba(30, 143, 255, 0.1); */
+    /* border-color: var(--color); */
+}
+section #profile .name{
+    font-size: 1.5em;
+}
+section #profile img{
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+section #profile .text{
+    font-family: qsb;
+    color: var(--sub-text-color);
+    font-size: 0.8em;
+    text-align: center;
+}
+section #readStatus{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-color: rgb(4, 211, 114);
+
+}
+section #readStatus .container{
+    height: 98px;
+    width:83%;
+    background-color: rgba(4, 211, 114,0.25);
+}
+section #readStatus h1{
+    position: absolute;
+    text-align:center;
+    color: var(--main-theme-color);
+    color: rgb(4, 211, 114);
+    transform: translateX(-50%);
+    left: 50%;
+}
+section #note{
+    background-color: rgb(138, 43, 226,0.15);
+    border-color:blueviolet;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    padding: 10px;
+    color: black;
+    color: blueviolet;
+}
+section #note{
+    font-family: qb;
+}
+section #note img{
+    height: 25px;
+    width: auto;
+}
+section #setting{
+    background-color: rgba(255, 69, 0,0.15);
+    border-color: orangered;
+    display: flex;
+    flex-direction: column;    
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    color: orangered;
+}
+section #setting img{
+    height: 25px;
+}
+section #setting p{
+    font-family: qb;
+}
+
+
 @media screen and (min-width: 900px) {
     ::-webkit-scrollbar {
         width: 7px;
@@ -228,4 +330,8 @@ section .nav{
     section .appName{
         font-size:90px;
     }
+    section #readStatus h1{
+        width:900px;
+    }
 }
+

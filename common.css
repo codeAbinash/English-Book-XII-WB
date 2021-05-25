@@ -17,22 +17,21 @@ body{
     background-color: var(--shadow-color);
     margin: 50px auto;
 }
-::-webkit-scrollbar {
+/* .main::-webkit-scrollbar {
     width: 3px;
 }
-/* Track */
-::-webkit-scrollbar-track {
+.main::-webkit-scrollbar-track {
   background:var(--main-theme-color);
 }
-/* Handle */
-::-webkit-scrollbar-thumb {
+
+.main::-webkit-scrollbar-thumb {
   background: var(--sub-text-color2);
   border-radius: 100px;
 }
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+
+.main::-webkit-scrollbar-thumb:hover {
   background:var(--sub-text-color);
-}
+}*/
 @media screen and (min-width: 800px) {
     ::-webkit-scrollbar {
         width: 7px;
@@ -40,6 +39,7 @@ body{
 }
 html{
     scroll-behavior: smooth;
+    background-color: var(--main-theme-color);
 }
 a{
     color: var(--color);

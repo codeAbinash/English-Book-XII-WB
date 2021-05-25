@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="grid.css">
 </head>
 <body>
 <div class="main" id="main">
     <header>
         <img src="icons/more.svg" alt="more" onclick="$d.openPage('more.html','left',100);">
-        <h1><span style="color: var(--color);">mind</span>scapes</h1>
+        <h1 class="press"><span style="color: var(--color);">mind</span>scapes</h1>
         <img src="icons/searchBlack.svg" alt="more" onclick="search()">
     </header>
     <section>
@@ -25,7 +26,7 @@
         </div>
         <p class="littleText">All chapters of class XII are available. By <span style="color: var(--color);"></span><span style="color: var(--color);"><a href="#DarkRose">Abinash Karmakar & Dark Rose Software</a></span></p>
         <!-- <p class="littleText" style="text-align: center;"><span style="color: var(--color);">Dark Rose Software</span></p> -->
-        <p class="link">Read From where you left ?</p>
+        <p class="link"> <img src="icons/book.svg" style="height: 13px;"> Read From where you left ?</p>
         
         <h1 class="heading center" style="margin-top:30px;">Prose</h1>
         <!--Books Are bellow-->
@@ -91,7 +92,7 @@
             </div>   
         </div>
         </a>
-        <!-- <div class="line"></div> -->
+
         <a href="#onKillingATree">
         <h1 class="heading center">Poetry</h1>
         <div class="bookCard" id="onKillingATree" name="On Killing A Tree"  onclick="clicked(this);">
@@ -198,8 +199,46 @@
 
 
         <div class="nav">
-            <p class="center">Clear Search</p>
-            <p class="center">Search Done</p>
+            <p class="center press">Clear Search</p>
+            <p class="center press">Search Done</p>
+        </div>
+
+        <div class="grid two">
+            <div class="left b press" id="readLeft">
+                <img src="icons/book.svg" alt="">
+                <h1>Read From</h1>
+                <p>Where you left?</p>
+            </div>
+            <div class="right b press" id="darkSwitch">
+                <img src="icons/sun.svg" alt="">
+                <h1>Dark Mode</h1>
+                <p>System Default</p>
+            </div>
+        </div>
+
+        <div class="grid one b press" id="readStatus">
+            <div class="container"></div>
+            <h1>You read 87%</h1>
+        </div>
+
+        <div class="grid three">
+            <div class="left b press" id="profile">
+                <img src="images/cover.png" alt="Abinash">
+                <h1 class="name center">Abinash</h1>
+                <p class="text">Lorem ipsum dolor sit amet. Dark Rose Software</p>
+            </div>
+            <div class="right ">
+                <div class="top press b" id="note">
+                    <img src="icons/pencil.svg" alt="">
+                    <h1>Notes</h1>
+                    <p>Take yor notes</p>
+                </div>
+                <div class="bottom b press" id="setting">
+                    <img src="icons/setting.svg">
+                    <h1>Settings</h1>
+                    <p>More Settings</p>
+                </div>
+            </div>
         </div>
 
     </section>
