@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+}
+html{
+    background-color: var(--main-theme-color);
 }
 body{
     opacity: 0;
-    transition: 0.5s opacity;
+    transition: 0.5s opacity,0.3s color,0.3s transform;
 }
 .center{
     text-align: center;
@@ -51,4 +53,16 @@ a:visited{
 }
 .littleText a:active{
     text-decoration: underline;
+}
+.press{
+    transition: 0.2s ease-out transform;
+}
+.press:active{
+    transform: scale(0.95);
+}
+.pressS{
+    transition: 0.2s ease-out transform;
+}
+.pressS:active{
+    transform: scale(0.9);
 }

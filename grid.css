@@ -1,9 +1,3 @@
-.press{
-    transition: 0.2s ease-out transform;
-}
-.press:active{
-    transform: scale(0.95);
-}
 
 .grid.one,.grid.two,.grid.three{
     width: 88%;

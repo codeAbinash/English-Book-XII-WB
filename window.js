@@ -1,5 +1,5 @@
 $d = {};
-$d.openPage = function(loc,type="left",time=200){
+$d.openPage = function(loc="back",type="left",time=200){
     switch (type) {
         case "top-right":
             document.body.style.transform="translateX(-100vw) translateY(100vh)";
@@ -28,5 +28,11 @@ $d.openPage = function(loc,type="left",time=200){
         default:
             break;
     }
-    setTimeout(() => {window.location.assign(loc);}, time);
+
+    setTimeout(() => {
+        if(loc=="back")
+            window.history.back();
+        else
+            window.location.assign(loc);
+    }, time);
 }
