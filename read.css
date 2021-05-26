@@ -1,0 +1,188 @@
+body{
+    color: var(--main-text-color);
+    background-color: var(--main-theme-color);
+}
+.main{
+    width: 100vw;
+    height: auto;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+header .backDiv{
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-theme-color);
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 0px #99999955;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index:1000;
+}
+header .backDiv:hover{
+    filter: brightness(0.8);
+}
+header .backDiv img{
+    filter:var(--theme-icon);
+}
+header .firstImage{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin:0 auto 0px auto;
+}
+header .heading{
+    text-align: center;
+    margin: 30px auto 0px auto;
+}
+header .author{
+    color: var(--color);
+    margin: 0px auto 15px auto;
+}
+.textDiv{
+    padding: 17px;
+}
+.textDiv .authDetail{
+    text-align: justify;
+    font-size: 1em;
+    margin: 10px auto;
+    font-family: qsb;
+    color: var(--main-text-color);
+}
+/* .textDiv .mainText:first-child::first-letter{
+    color: blue;
+    
+} */
+.textDiv .mainText .text{
+    font-size: 1.05em;
+    font-family:qsb;
+    text-indent: 20px;
+    text-align: justify;
+    margin: 20px auto;
+}
+footer{
+    height: auto;
+    width: 100%;
+    padding: 17px;
+}
+footer .done{
+    height: auto;
+    width:100%;
+    background-color: rgba(4, 211, 114,0.15);
+    display: flex;
+    margin:15px auto;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(4, 211, 114);
+    font-family: qsb;
+    padding: 20px;
+}
+
+.twoDiv{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.twoDiv>div{
+    height: 100px;
+    width: calc(50% - 5px);
+    border-radius: 10px;
+}
+.oneDiv{
+    height: 100px;
+    width: 100%;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+
+.threeDiv{
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-between;
+}
+.threeDiv>div{
+    height: 200px;
+    width: calc(50% - 5px);
+    border-radius: 10px;
+}
+.threeDiv .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.threeDiv .right>div{
+    height: calc(50% - 5px);
+    border-radius: 10px;
+}
+.aGrid{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.aGrid h1{
+    font-size: 1.5em;
+}
+.aGrid p{
+    font-family: qsb;
+}
+.b{
+    border: 1px solid var(--sub-text-color2);
+}
+@media screen and (min-width: 800px) {
+    header{
+        flex-direction: row;
+    }
+    header .firstImage{
+        width: 50%;
+    }
+    header .desc{
+        width: 50%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    *{
+        overflow-x: hidden;
+    }
+    .textDiv{
+        margin: 50px;
+    }
+    .textDiv .authDetail{
+        font-size: 1.6em;
+        font-family: qsb;
+    }
+    .textDiv .mainText .text{
+        font-size: 1.7em;
+        font-family: qsb;
+    }
+    footer{
+        width: 800px;
+        display: block;
+        margin: auto;
+    }
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+}

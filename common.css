@@ -34,11 +34,7 @@ body{
 .main::-webkit-scrollbar-thumb:hover {
   background:var(--sub-text-color);
 }*/
-@media screen and (min-width: 800px) {
-    ::-webkit-scrollbar {
-        width: 7px;
-    }
-}
+
 html{
     scroll-behavior: smooth;
     background-color: var(--main-theme-color);

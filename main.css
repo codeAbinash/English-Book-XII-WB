@@ -303,12 +303,16 @@ section #setting img{
 section #setting p{
     font-family: qb;
 }
-
-
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
     ::-webkit-scrollbar {
         width: 7px;
     }
+} */
+
+@media screen and (min-width: 900px) {
+    /*::-webkit-scrollbar {
+        width: 7px;
+    }*/
     section .bookCard{
         cursor: pointer;
     }
