@@ -1,3 +1,4 @@
+
 body{
     color: var(--main-text-color);
     background-color: var(--main-theme-color);
@@ -5,6 +6,10 @@ body{
 .main{
     width: 100vw;
     height: auto;
+    z-index:1005;
+}
+.readingMode{
+    box-shadow: 0 0 0 100000px rgba(255, 217, 0, 0.178) inset;
 }
 *{
     padding: 0;
@@ -20,7 +25,8 @@ header{
 header .backDiv{
     height: 50px;
     width: 50px;
-    background-color: var(--main-theme-color);
+    background-color: var(--backdrop-light);
+    backdrop-filter: blur(5px);
     border-radius: 50%;
     box-shadow: 1px 1px 10px 0px #99999955;
     display: flex;
@@ -28,15 +34,57 @@ header .backDiv{
     align-items: center;
     position: fixed;
     top: 15px;
-    left: 15px;
     z-index:1000;
 }
+header .backDiv{
+    left: 15px;
+}
+
+
 header .backDiv:hover{
     filter: brightness(0.8);
 }
 header .backDiv img{
     filter:var(--theme-icon);
+    width:45%;
 }
+header .optionsDiv{
+    height: calc(400px + 140px); /*  50*8  + 20*7*/
+    width: 50px;
+    position: fixed;
+    background-color: transparent;
+    /*top:px;*//*-250px - 80px + 15px + 47px*/
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease-out top;
+    z-index:1000;
+    max-height: 100vh;
+    overflow: show;
+}
+header .optionsDiv .option{
+    height: 50px;
+    width: 50px;
+    background-color: var(--backdrop-light);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 10px 0px #99999955;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+header .optionsDiv .option img{
+    filter: var(--theme-icon);
+    width: 45%;
+}
+#more{
+    transition: 0.4s linear transform;
+}
+
+
 header .firstImage{
     width: 100%;
     height: auto;
@@ -51,6 +99,7 @@ header .author{
     color: var(--color);
     margin: 0px auto 15px auto;
 }
+
 .textDiv{
     padding: 17px;
 }
@@ -58,7 +107,6 @@ header .author{
     text-align: justify;
     font-size: 1em;
     margin: 10px auto;
-    font-family: qsb;
     color: var(--main-text-color);
 }
 /* .textDiv .mainText:first-child::first-letter{
@@ -67,7 +115,6 @@ header .author{
 } */
 .textDiv .mainText .text{
     font-size: 1.05em;
-    font-family:qsb;
     text-indent: 20px;
     text-align: justify;
     margin: 20px auto;
@@ -148,6 +195,57 @@ footer .done{
 .b{
     border: 1px solid var(--sub-text-color2);
 }
+
+
+
+.fontWindow{
+    height: auto;
+    width: 85vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: var(--backdrop);
+    backdrop-filter:blur(15px);
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    padding: 20px;
+    border: 0.1px solid var(--sub-text-color);
+    display: none;
+
+}
+.fontWindow h1{
+    font-size: 1.3em;
+}
+.fontWindow .controls{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.fontWindow .controls div{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.fontWindow .controls div:active{
+    background-color: var(--sub-text-color2);
+}
+.fontWindow p{
+    padding: 15px;
+    margin: 5px;
+    font-family: qsb;
+    border: 1px solid var(--sub-text-color);
+    border-radius: 5px;
+}
+.cursorPoint{
+    cursor: default;
+}
+
 @media screen and (min-width: 800px) {
     header{
         flex-direction: row;
@@ -175,14 +273,16 @@ footer .done{
     }
     .textDiv .mainText .text{
         font-size: 1.7em;
-        font-family: qsb;
     }
     footer{
         width: 800px;
         display: block;
         margin: auto;
     }
-    ::-webkit-scrollbar {
-        width: 3px;
+    .fontWindow{
+        width: 500px;
+    }
+    .cursorPoint{
+        cursor: pointer;
     }
 }

@@ -1,3 +1,4 @@
+
 body{
     margin-bottom: 100px;
     /* transform: translateX(-90vw) translateY(90vh); */
@@ -8,6 +9,7 @@ body{
     align-items: center;
     color: var(--main-text-color);
     background-color: var(--main-theme-color);
+    
 }
 header{
     height:65px;
@@ -142,8 +144,7 @@ section .bookCard{
     border-radius: 12px;
     box-shadow: 1px 1px 8px 5px var(--shadow-color-light);
     overflow: hidden;
-    transition: 0.4s;
-
+    transition: 0.4s height,0.4s width,0.4s opacity,0.4s top;
 }
 section .bookCard:active{
     transform: scale(0.95);

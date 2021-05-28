@@ -25,3 +25,26 @@ function clicked(elem){
     header.style.top="-70px"
 }
 
+
+
+
+var sun = document.getElementById("sun");
+var rotateVar = 0;
+sun.style.transition="0.7s linear transform";
+//Get variable in 
+var darkText = document.querySelector("#darkSwitchText");
+darkText.innerHTML = localStorage.darkModeEnabledMindScapes;
+let applyDarkThemeMain = ()=>{
+    var darkStatus = localStorage.darkModeEnabledMindScapes;
+    if(darkStatus=="Light Mode"){
+        localStorage.darkModeEnabledMindScapes = "Dark Mode";
+        darkText.innerHTML = "Dark Mode";
+    }else if(darkStatus=="Dark Mode"){
+        localStorage.darkModeEnabledMindScapes = "Light Mode";
+        darkText.innerHTML = "Light Mode";
+    }
+    rotateVar+=360;
+    applyTheme();
+    sun.style.transform = `rotate(${rotateVar}deg)`;
+};
+

@@ -8,13 +8,47 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="read.css">
     <link rel="stylesheet" href="fonts.css">
+    <script src="jquery.js"></script>
+
 </head>
 <body>
-<div class="main">
+<div class="main ">
+
     <header>
         <div class="backDiv pressS" onclick="$d.openPage('back');">
             <img src="icons/back.svg" alt="back" >
         </div>
+
+        <div class="optionsDiv" id="options">
+            <div class="option pressS cursorPoint" onclick="switchFullScreen()">
+                <img src="icons/fullscreenOn.svg" alt="More" style="width: 30%;" id="fullscreen">
+            </div>
+
+            <div class="option pressS cursorPoint">
+                <img src="icons/language.svg" alt="More">
+            </div>
+
+            <div class="option pressS cursorPoint">
+                <img src="icons/language.svg" alt="More">
+            </div>
+            
+            <div class="option pressS cursorPoint" onclick="openFontSettingWindow()">
+                <h3 style="font-size:25px;">A</h3>
+            </div>
+            <div class="option pressS cursorPoint">
+                <img src="icons/pencilBlack.svg" alt="More">
+            </div>
+            <div class="option pressS cursorPoint" onclick="readingMode()">
+                <img src="icons/eye.svg" alt="More">
+            </div>
+            <div class="option pressS cursorPoint" onclick="switchDarkThemeRead()">
+                <img src="icons/sunBlack.svg" alt="More" >
+            </div>
+            <div class="option pressS cursorPoint" onclick="clickedMore()">
+                <img src="icons/back.svg" alt="More" id="more" style="transform: rotate(90deg);">
+            </div>
+        </div>
+
         <img src="images/theEyeshaveIt.jpg" alt="Chapter image" class="firstImage press">
         <div class="desc">
             <h1 class="heading press">The Eyes Have It</h1>
@@ -22,7 +56,7 @@
         </div>
     </header>
 
-    <div class="textDiv">
+    <div class="textDiv" onclick="clickedMore()">
 
 
 
@@ -31,8 +65,9 @@
 
 
 
-        <p class="authDetail"> <span style="color:var(--color);">Ruskin Bond</span>(1934-) is a widely read writer of Indian origin who writes in English. The setting for most of his stories are the hills of the Himalayas. Among his most notable works are <i>The Room on the Roof, The Angry River, Rain in the Mountains.</i></p>
-        <p class="authDetail">In this story Bond exploits the situational irony that originates between two people who meet by chance in railway compartment. The young man and the girl are unaware of their individual blindness and converse with each other from the conviction that both of them can see.</p>
+        <p class="authDetail"> <span style="color:var(--color);">Ruskin Bond</span>(1934-) : is a widely read writer of Indian origin who writes in English. The setting for most of his stories are the hills of the Himalayas. Among his most notable works are <i>The Room on the Roof, The Angry River, Rain in the Mountains.</i></p>
+        <p class="authDetail" style="text-indent: 15px;">In this story Bond exploits the situational irony that originates between two people who meet by chance in railway compartment. The young man and the girl are unaware of their individual blindness and converse with each other from the conviction that both of them can see.</p>
+        
         <br>
 
         <div class="mainText">
@@ -50,7 +85,7 @@
             <p class="text">"Where are you going?" she asked.</p>
             <p class="text">"To Dehra, and then to Mussoorie."</p>
             <p class="text">"Oh, how lucky you are. I wish I were going to Mussoorie.I love the hills. Especially in October."</p>            
-            <p class="text" style="font-family: qsb;">"Yes, this is the best time," I said, calling on my memories. "The hills are covered with wild dahlias, the sun is delicious, and at night you can sit in front of a logfire and drink a little brandy. Most of the tourists have gone, and the roads are quiet and almost deserted. Yes, October is the best time."</p>
+            <p class="text">"Yes, this is the best time," I said, calling on my memories. "The hills are covered with wild dahlias, the sun is delicious, and at night you can sit in front of a logfire and drink a little brandy. Most of the tourists have gone, and the roads are quiet and almost deserted. Yes, October is the best time."</p>
             <p class="text">She was silent. I wondered if my words had touched her, or whether she thought me a romantic fool. Then I made a mistake.</p>
 
             <p class="text">"What is it like outside?" I asked.</p>
@@ -85,11 +120,11 @@
         </div>
     </div>
     <footer>
-        <h3 class="center">---The End---</h3>
+        <h3 class="center">The End</h3>
         <div class="done press b" style="border-color:rgb(4, 211, 114);">
             <p>Click to Complete (+10 Points)</p>
         </div>
-        <div class="twoDiv">
+        <!--div class="twoDiv">
             <div class="left b press aGrid" style="border-color: var(--color);color: var(--color);background-color:rgba(31, 143, 255, 0.15);">
                 <h1>M.C.Q.</h1>
                 <p>Coming Soon</p>
@@ -127,11 +162,24 @@
             </div>
             <div class="right b press aGrid" style="border-color: blueviolet;color: blueviolet;background-color: rgba(137, 43, 226, 0.2);">
             </div>
-        </div>
+        </div-->
         <h1 class="center">Beta Version</h1>
-    
+        
     </footer>
-
+    <div class="fontWindow">
+        <h1 class="center">Font Settings</h1>
+        <h4>Font Size : </h4>
+        <div class="controls">
+            <div onclick="fontSize('-');" class="cursorPoint">-</div>
+            <div id="fontSize" class="cursorPoint">25</div>
+            <div onclick="fontSize('+');" class="cursorPoint">+</div>
+        </div>
+        <h4 style="margin-bottom: 25px;">Font Width : </h4>
+        <p class="center press cursorPoint" style="font-family: qm;" onclick="applyFont('qm')">Light</p>
+        <p class="center press cursorPoint" style="font-family: qsb;" onclick="applyFont('qsb')">Medium</p>
+        <p class="center press cursorPoint" style="font-family: qb;" onclick="applyFont('qb')">Bold</p>
+        <p class="center press cursorPoint done" style="background-color: var(--color);color: white;border: none;" >Done</p>
+    </div>
 
 
 </div>
@@ -141,5 +189,6 @@
 <script src="window.js"></script>
 <script src="dark.js"></script>
 <script src="common.js"></script>
+<script src="read.js"></script>
 </body>
 </html>

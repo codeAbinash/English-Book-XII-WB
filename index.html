@@ -32,9 +32,28 @@ iframe{
 </style>
 </head>
 <body>
-<iframe src="main.html" frameborder="0"></iframe>
+<iframe src="read.html" frameborder="0"></iframe>
 <script src="common.js"></script>
 <script src="dark.js"></script>
+<script>
 
+function checkDarkTheme(){
+    var currentTheme = localStorage.darkModeEnabledMindScapes;
+    if(currentTheme=="Light Mode")
+        applyLightTheme();
+    else if(currentTheme=="Dark Mode")
+        applyDarkTheme();
+    else if(currentTheme=="System Default"){
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches)
+            applyDarkTheme();
+        else
+            applyLightTheme();
+    }
+    setTimeout(() => {
+        checkDarkTheme();
+    }, 1000);
+}
+checkDarkTheme();
+</script>
 </body>
 </html>
