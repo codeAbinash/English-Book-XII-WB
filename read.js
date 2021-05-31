@@ -1,6 +1,6 @@
 var options = document.querySelector("#options");
 var more = document.querySelector("#more");
-var isMoreOpen = 1;
+var isMoreOpen = -1;
 const clickedMore = ()=>{
     isMoreOpen*=-1;
     if(isMoreOpen==1)
@@ -62,13 +62,13 @@ let switchDarkThemeRead = ()=>{
     clickedMore();
 };
 
-
+//localStorage.fontSizeMindScapes="";
 //Set font storage light if it is opened for 1st time
 if(!(localStorage.fontsMindScapes))
     localStorage.fontsMindScapes='qm';
 document.querySelector(".mainText").style.fontFamily = localStorage.fontsMindScapes;
 if(!(localStorage.fontSizeMindScapes))
-    localStorage.fontSizeMindScapes="1em";
+    localStorage.fontSizeMindScapes="1";
 
 
 function applyFont(type){

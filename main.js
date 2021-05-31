@@ -22,7 +22,7 @@ function clicked(elem){
     elem.style.height="100vh";
     elem.style.width="95vw";
     elem.style.opacity="0";
-    header.style.top="-70px"
+    header.style.top="-70px";
 }
 
 
@@ -47,4 +47,3 @@ let applyDarkThemeMain = ()=>{
     applyTheme();
     sun.style.transform = `rotate(${rotateVar}deg)`;
 };
-

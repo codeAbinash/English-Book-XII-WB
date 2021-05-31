@@ -54,7 +54,8 @@ header .optionsDiv{
     position: fixed;
     background-color: transparent;
     /*top:px;*//*-250px - 80px + 15px + 47px*/
-    top: 15px;
+    /* top: 15px; */
+    top:calc(-400px - 140px + 15px + 50px);
     right: 15px;
     display: flex;
     flex-direction: column;
